@@ -26,6 +26,7 @@ public class Basic {
         else if (second > third) return second;
         else return third;
     }
+
     public int lcm(int first, int second) {
         int result = (first > second) ? first : second;
         while (true) {
@@ -33,6 +34,7 @@ public class Basic {
             result++;
         }
     }
+
     public int gcd(int first, int second) {
         int greater = (first > second) ? first : second;
         int smaller = (first < second) ? first : second;
@@ -43,5 +45,20 @@ public class Basic {
             smaller = result;
         }
         return result;
+    }
+
+    public double simpleInterest(double principle, double duration, double rate) {
+        return principle * duration * rate;
+    }
+
+    public double compoundInterest(double principle, double duration, double rate, double frequency) {
+        double times = frequency * duration;
+        double effectiverate = rate/frequency;
+        double initialprinciple = principle;
+        while (times >= 1){
+            principle = principle * rate * duration / 100 + principle;
+            times--;
+        }
+        return principle - initialprinciple;
     }
 }

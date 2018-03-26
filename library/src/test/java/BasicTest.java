@@ -54,4 +54,14 @@ public class BasicTest {
     public void gcd() {
         assertThat(basic.gcd(90,135),is(45));
     }
+
+    @Test
+    public void simpleInterest() {
+        assertThat(basic.simpleInterest(1500,2,2.5),is(7500.0));
+    }
+
+    @Test
+    public void compoundInterest() {
+        assertThat(basic.compoundInterest(1000,1,1,1),is(10.0));
+    }
 }
