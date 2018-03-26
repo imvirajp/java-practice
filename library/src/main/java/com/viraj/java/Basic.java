@@ -26,5 +26,22 @@ public class Basic {
         else if (second > third) return second;
         else return third;
     }
-
+    public int lcm(int first, int second) {
+        int result = (first > second) ? first : second;
+        while (true) {
+            if (result%first == 0 && result%second == 0) return result;
+            result++;
+        }
+    }
+    public int gcd(int first, int second) {
+        int greater = (first > second) ? first : second;
+        int smaller = (first < second) ? first : second;
+        int result = smaller;
+        while(greater % smaller != 0) {
+            result = greater%smaller;
+            greater = smaller;
+            smaller = result;
+        }
+        return result;
+    }
 }

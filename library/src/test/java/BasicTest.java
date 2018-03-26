@@ -45,4 +45,13 @@ public class BasicTest {
         assertThat(basic.greatestOf(1,2,3),is(3));
     }
 
+    @Test
+    public void lcm() {
+        assertThat(basic.lcm(20,28),is(140));
+    }
+
+    @Test
+    public void gcd() {
+        assertThat(basic.gcd(90,135),is(45));
+    }
 }

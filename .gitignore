@@ -7,3 +7,5 @@ gradlew.bat
 .project
 .idea
 **/out/**
+*.xml
+*.iml
