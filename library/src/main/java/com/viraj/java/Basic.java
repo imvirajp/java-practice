@@ -53,12 +53,11 @@ public class Basic {
 
     public double compoundInterest(double principle, double duration, double rate, double frequency) {
         double times = frequency * duration;
-        double effectiverate = rate/frequency;
-        double initialprinciple = principle;
+        double initialPrinciple = principle;
         while (times >= 1){
             principle = principle * rate * duration / 100 + principle;
             times--;
         }
-        return principle - initialprinciple;
+        return principle - initialPrinciple;
     }
 }
